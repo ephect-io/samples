@@ -18,5 +18,9 @@
     "minimum-stability": "stable",
     "require": {
         "ephect-io/framework": "dev-remove_samples"
-    }
+    },
+    "bin": [
+        "bin/ephect-io_samples_install.sh",
+        "bin/ephect-io_samples_install.bat"
+    ]
 }
