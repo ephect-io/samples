@@ -17,9 +17,6 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "ephect-io/framework": "dev-develop"
-    },
-    "require-dev": {
-        "ephect-io/toolbox": "dev-develop"
+        "ephect-io/framework": "dev-remove_samples"
     }
 }
