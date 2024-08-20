@@ -1,0 +1,25 @@
+{
+    "name": "ephect-io/samples",
+    "type": "library",
+    "homepage": "https://ephect.io",
+    "license": "GPL-3.0+",
+    "version": "0.7.2",
+    "autoload": {
+        "psr-4": {
+            "Ephect\\Samples\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Blanchard",
+            "email": "dpjb@hotmail.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ephect-io/framework": "dev-develop"
+    },
+    "require-dev": {
+        "ephect-io/toolbox": "dev-develop"
+    }
+}
