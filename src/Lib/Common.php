@@ -55,8 +55,8 @@ class Common
     {
         $srcDir = $commonDir . DIRECTORY_SEPARATOR . 'app';
 
-        File::safeMkDir(CONFIG_DOCROOT);
-        $destDir = realpath(CONFIG_DOCROOT);
+        File::safeMkDir(siteSrcPath());
+        $destDir = realpath(siteSrcPath());
 
         $this->publisFiles($srcDir, $destDir);
     }
