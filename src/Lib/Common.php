@@ -3,6 +3,7 @@
 namespace Ephect\Samples;
 
 use Ephect\Framework\CLI\Console;
+use Ephect\Framework\CLI\ConsoleColors;
 use Ephect\Framework\Modules\ModuleManifestEntity;
 use Ephect\Framework\Modules\ModuleManifestReader;
 use Ephect\Framework\Utils\File;
@@ -33,28 +34,47 @@ class Common
     public function createCommonTrees(): void
     {
         $common = self::getModuleSrcDir() . 'Assets' . DIRECTORY_SEPARATOR . 'Common';
-        $src_dir = $common . DIRECTORY_SEPARATOR . 'config';
 
+        Console::writeLine(ConsoleColors::getColoredString("Publishing Common files...", ConsoleColors::BLUE));
+        
+        $this->publishConfigFiles($common);
+        $this->publishAppFiles($common);
+    }
+
+    private function publishConfigFiles(string $commonDir): void
+    {
         File::safeMkDir(CONFIG_DIR);
         $destDir = realpath(CONFIG_DIR);
 
-        $tree = File::walkTreeFiltered($src_dir);
+        $srcDir = $commonDir . DIRECTORY_SEPARATOR . 'config';
 
-        foreach ($tree as $filePath) {
-            File::safeWrite($destDir . $filePath, '');
-            copy($src_dir . $filePath, $destDir . $filePath);
-        }
+        $this->publisFiles($srcDir, $destDir);
+    }
 
-        $src_dir = $common . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Assets';
+    private function publishAppFiles(string $commonDir): void
+    {
+        $srcDir = $commonDir . DIRECTORY_SEPARATOR . 'app';
 
         File::safeMkDir(CONFIG_DOCROOT);
         $destDir = realpath(CONFIG_DOCROOT);
 
-        $tree = File::walkTreeFiltered($src_dir);
+        $this->publisFiles($srcDir, $destDir);
+    }
 
+    private function publisFiles(string $srcDir, string $destDir): void
+    {
+        if (!file_exists($srcDir) || !file_exists($destDir)) {
+            Console::writeLine("Stopping! source dir %s or destination dir %s does not exist.", $srcDir, $destDir);
+            return;
+        }
+
+        $tree = File::walkTreeFiltered($srcDir);
+        Console::writeLine(ConsoleColors::getColoredString("Source directory: $srcDir", ConsoleColors::GREEN));
+        Console::writeLine(ConsoleColors::getColoredString("Destination directory: $destDir", ConsoleColors::GREEN));
         foreach ($tree as $filePath) {
+            Console::writeLine("Copying file: %s", $filePath);
             File::safeWrite($destDir . $filePath, '');
-            copy($src_dir . $filePath, $destDir . $filePath);
+            copy($srcDir . $filePath, $destDir . $filePath);
         }
     }
 

@@ -21,7 +21,7 @@ class Lib extends AbstractCommandLib
         $destDir = realpath(siteSrcPath());
 
         if (!file_exists($sample) || !file_exists($destDir)) {
-            Console::writeLine("Stopping! Sample dir %s or destination dir %s does not exists.", $sample, $destDir);
+            Console::writeLine("Stopping! Sample dir %s or destination dir %s does not exist.", $sample, $destDir);
             return;
         }
 
