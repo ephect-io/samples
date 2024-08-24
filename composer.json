@@ -15,9 +15,14 @@
             "email": "dpjb@hotmail.fr"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-        "ephect-io/framework": "dev-develop"
+        "ephect-io/framework": "dev-develop",
+        "ephect-io/forms": "dev-develop",
+        "ephect-io/web-app": "dev-develop",
+        "ephect-io/web-component": "dev-develop",
+        "ephect-io/html-keeper": "dev-develop",
+        "ephect-io/response-header": "dev-develop"
     },
     "bin": [
         "bin/ephect-io_samples_install.sh",
