@@ -30,13 +30,6 @@ class Common
         return $manifestReader->read(Common::getModuleConfDir());
     }
 
-    public static function getCustomWebComponentRoot(): string
-    {
-        $moduleTemplatesDir = Common::getModuleManifest()->getTemplates();
-        $customConfig =  file_exists(CONFIG_DIR . 'webcomponents') ? trim(file_get_contents(CONFIG_DIR . 'webcomponents')) : $moduleTemplatesDir;
-        return SRC_ROOT . $customConfig . DIRECTORY_SEPARATOR;
-    }
-
     public function createCommonTrees(): void
     {
         $common = self::getModuleSrcDir() . 'Assets' . DIRECTORY_SEPARATOR . 'Common';
