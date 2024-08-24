@@ -18,9 +18,14 @@ class CommonLib extends Element
         parent::__construct($parent);
     }
 
+    public static function getModuleSrcDir()
+    {
+        return  dirname(__DIR__) . DIRECTORY_SEPARATOR;
+    }
+
     public function createCommonTrees(): void
     {
-        $common = SRC_ROOT . 'Assets' . DIRECTORY_SEPARATOR . 'Common';
+        $common = self::getModuleSrcDir() . 'Assets' . DIRECTORY_SEPARATOR . 'Common';
         $src_dir = $common . DIRECTORY_SEPARATOR . 'config';
 
         File::safeMkDir(CONFIG_DIR);
@@ -33,7 +38,7 @@ class CommonLib extends Element
             copy($src_dir . $filePath, $destDir . $filePath);
         }
 
-        $src_dir = $common . DIRECTORY_SEPARATOR . 'public';
+        $src_dir = $common . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Assets';
 
         File::safeMkDir(CONFIG_DOCROOT);
         $destDir = realpath(CONFIG_DOCROOT);
