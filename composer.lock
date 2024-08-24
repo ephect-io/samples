@@ -96,12 +96,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ephect-io/html-keeper.git",
-                "reference": "836f2f04c7f12d97e1d7ae3f778c0f82ec6df1ca"
+                "reference": "fb4afacd26327f3b142f881e7406091208f9f373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ephect-io/html-keeper/zipball/836f2f04c7f12d97e1d7ae3f778c0f82ec6df1ca",
-                "reference": "836f2f04c7f12d97e1d7ae3f778c0f82ec6df1ca",
+                "url": "https://api.github.com/repos/ephect-io/html-keeper/zipball/fb4afacd26327f3b142f881e7406091208f9f373",
+                "reference": "fb4afacd26327f3b142f881e7406091208f9f373",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                 "issues": "https://github.com/ephect-io/html-keeper/issues",
                 "source": "https://github.com/ephect-io/html-keeper/tree/develop"
             },
-            "time": "2024-08-21T20:35:57+00:00"
+            "time": "2024-08-24T08:53:53+00:00"
         },
         {
             "name": "ephect-io/javascripts",
