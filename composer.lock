@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "660bfc50cee3608d9f59521d4ad74aa5",
+    "content-hash": "753816de5d9e470b8ce9a7439e36cdd7",
     "packages": [
         {
             "name": "ephect-io/forms",
@@ -131,17 +131,61 @@
             "time": "2024-08-21T20:35:57+00:00"
         },
         {
+            "name": "ephect-io/javascripts",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ephect-io/javascripts.git",
+                "reference": "617539113e87c1d6bb1d23f16d429233615ae96f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ephect-io/javascripts/zipball/617539113e87c1d6bb1d23f16d429233615ae96f",
+                "reference": "617539113e87c1d6bb1d23f16d429233615ae96f",
+                "shasum": ""
+            },
+            "require": {
+                "ephect-io/framework": "dev-develop"
+            },
+            "bin": [
+                "bin/ephect-io_javascripts_install.sh",
+                "bin/ephect-io_javascripts_install.bat"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ephect\\JavaScripts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Doe",
+                    "email": "john.doe@example.com"
+                }
+            ],
+            "homepage": "https://example.com",
+            "support": {
+                "issues": "https://github.com/ephect-io/javascripts/issues",
+                "source": "https://github.com/ephect-io/javascripts/tree/develop"
+            },
+            "time": "2024-08-24T08:53:15+00:00"
+        },
+        {
             "name": "ephect-io/response-header",
             "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ephect-io/response-header.git",
-                "reference": "7577fcc3b3ed5fe8f24154d4e50db552901e25ef"
+                "reference": "5f19b3d383de52da1c24523b97a88244e29d5686"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ephect-io/response-header/zipball/7577fcc3b3ed5fe8f24154d4e50db552901e25ef",
-                "reference": "7577fcc3b3ed5fe8f24154d4e50db552901e25ef",
+                "url": "https://api.github.com/repos/ephect-io/response-header/zipball/5f19b3d383de52da1c24523b97a88244e29d5686",
+                "reference": "5f19b3d383de52da1c24523b97a88244e29d5686",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +212,7 @@
                 "issues": "https://github.com/ephect-io/response-header/issues",
                 "source": "https://github.com/ephect-io/response-header/tree/develop"
             },
-            "time": "2024-08-21T20:35:57+00:00"
+            "time": "2024-08-24T08:52:52+00:00"
         },
         {
             "name": "ephect-io/router",
@@ -302,7 +346,8 @@
         "ephect-io/web-app": 20,
         "ephect-io/web-component": 20,
         "ephect-io/html-keeper": 20,
-        "ephect-io/response-header": 20
+        "ephect-io/response-header": 20,
+        "ephect-io/javascripts": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

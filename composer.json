@@ -22,7 +22,8 @@
         "ephect-io/web-app": "dev-develop",
         "ephect-io/web-component": "dev-develop",
         "ephect-io/html-keeper": "dev-develop",
-        "ephect-io/response-header": "dev-develop"
+        "ephect-io/response-header": "dev-develop",
+        "ephect-io/javascripts": "dev-develop"
     },
     "bin": [
         "bin/ephect-io_samples_install.sh",
