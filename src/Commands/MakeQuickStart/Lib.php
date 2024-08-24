@@ -6,7 +6,7 @@ use Ephect\Framework\CLI\Console;
 use Ephect\Framework\CLI\ConsoleColors;
 use Ephect\Framework\Commands\AbstractCommandLib;
 use Ephect\Framework\Utils\File;
-use Ephect\Modules\WebComponent\Common;
+use Ephect\Samples\Common;
 
 class Lib extends AbstractCommandLib
 {
