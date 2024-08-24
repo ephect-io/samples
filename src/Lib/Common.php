@@ -2,25 +2,39 @@
 
 namespace Ephect\Samples;
 
-use Ephect\Framework\CLI\Application;
 use Ephect\Framework\CLI\Console;
-use Ephect\Framework\Element;
+use Ephect\Framework\Modules\ModuleManifestEntity;
+use Ephect\Framework\Modules\ModuleManifestReader;
 use Ephect\Framework\Utils\File;
 
-class CommonLib extends Element
+class Common
 {
-
-    /**
-     * Constructor
-     */
-    public function __construct(Application $parent)
+    public static function getModuleDir()
     {
-        parent::__construct($parent);
+        return  dirname(__DIR__, 2) . DIRECTORY_SEPARATOR;
     }
 
     public static function getModuleSrcDir()
     {
         return  dirname(__DIR__) . DIRECTORY_SEPARATOR;
+    }
+
+    public static function getModuleConfDir()
+    {
+        return  dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . REL_CONFIG_DIR;
+    }
+
+    public static function getModuleManifest(): ModuleManifestEntity
+    {
+        $manifestReader = new ModuleManifestReader();
+        return $manifestReader->read(Common::getModuleConfDir());
+    }
+
+    public static function getCustomWebComponentRoot(): string
+    {
+        $moduleTemplatesDir = Common::getModuleManifest()->getTemplates();
+        $customConfig =  file_exists(CONFIG_DIR . 'webcomponents') ? trim(file_get_contents(CONFIG_DIR . 'webcomponents')) : $moduleTemplatesDir;
+        return SRC_ROOT . $customConfig . DIRECTORY_SEPARATOR;
     }
 
     public function createCommonTrees(): void

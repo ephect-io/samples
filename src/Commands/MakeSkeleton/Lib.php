@@ -1,16 +1,17 @@
 <?php
 
-namespace Ephect\Samples\MakeSkeleton;
+namespace Ephect\Samples\Commands\MakeSkeleton;
 
 use Ephect\Framework\Commands\AbstractCommandLib;
 use Ephect\Framework\Utils\File;
+use Ephect\Modules\WebComponent\Common;
 
 class Lib extends AbstractCommandLib
 {
 
     public function makeSkeleton(): void
     {
-        $sample = SRC_ROOT . 'Assets' . DIRECTORY_SEPARATOR . 'Skeleton';
+        $sample = Common::getModuleSrcDir() . 'Assets' . DIRECTORY_SEPARATOR . 'Skeleton';
 
         File::safeMkDir(siteSrcPath());
         $destDir = realpath(siteSrcPath());

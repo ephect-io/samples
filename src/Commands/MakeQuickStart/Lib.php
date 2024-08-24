@@ -1,15 +1,17 @@
 <?php
 
-namespace Ephect\Samples\MakeQuickStart;
+namespace Ephect\Samples\Commands\MakeQuickStart;
 
+use Ephect\Framework\Commands\AbstractCommandLib;
 use Ephect\Framework\Utils\File;
+use Ephect\Modules\WebComponent\Common;
 
-class Lib
+class Lib extends AbstractCommandLib
 {
 
     public function createQuickstart(): void
     {
-        $sample = SRC_ROOT . 'Assets' . DIRECTORY_SEPARATOR . 'QuickStart';
+        $sample = Common::getModuleSrcDir() . 'Assets' . DIRECTORY_SEPARATOR . 'QuickStart';
 
         File::safeMkDir(siteSrcPath());
         $destDir = realpath(siteSrcPath());
