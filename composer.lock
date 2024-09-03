@@ -260,12 +260,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ephect-io/web-app.git",
-                "reference": "066bf9f3b321318b5709ce9337e3a4850cb36db7"
+                "reference": "7f27bdbc65da925edacec21a60d2a4b5ff7fdfac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ephect-io/web-app/zipball/066bf9f3b321318b5709ce9337e3a4850cb36db7",
-                "reference": "066bf9f3b321318b5709ce9337e3a4850cb36db7",
+                "url": "https://api.github.com/repos/ephect-io/web-app/zipball/7f27bdbc65da925edacec21a60d2a4b5ff7fdfac",
+                "reference": "7f27bdbc65da925edacec21a60d2a4b5ff7fdfac",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "issues": "https://github.com/ephect-io/web-app/issues",
                 "source": "https://github.com/ephect-io/web-app/tree/develop"
             },
-            "time": "2024-09-03T14:14:13+00:00"
+            "time": "2024-09-03T14:15:41+00:00"
         },
         {
             "name": "ephect-io/web-component",
@@ -301,12 +301,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ephect-io/web-component.git",
-                "reference": "4bc26d09c82681a3a0e79ca431d6e76ed21d642a"
+                "reference": "a3fc1ae0347bf5958e9d8fd4757aff7cd74bc240"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ephect-io/web-component/zipball/4bc26d09c82681a3a0e79ca431d6e76ed21d642a",
-                "reference": "4bc26d09c82681a3a0e79ca431d6e76ed21d642a",
+                "url": "https://api.github.com/repos/ephect-io/web-component/zipball/a3fc1ae0347bf5958e9d8fd4757aff7cd74bc240",
+                "reference": "a3fc1ae0347bf5958e9d8fd4757aff7cd74bc240",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +334,7 @@
                 "issues": "https://github.com/ephect-io/web-component/issues",
                 "source": "https://github.com/ephect-io/web-component/tree/develop"
             },
-            "time": "2024-09-02T18:35:33+00:00"
+            "time": "2024-09-03T14:17:51+00:00"
         }
     ],
     "packages-dev": [],
